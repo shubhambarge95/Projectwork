@@ -1,0 +1,38 @@
+	
+JDBC 
+JDBC stands for java database connectivity.
+it is api(application programming interface) provided by oracle
+jdbc is api which can be used to communicate with databases from java aplication
+	
+	jdbc is a part of j2se(java second standard edition)(advance java)
+	jdbc is a specification defined by java vender(
+	sun Micro Systems)
+	implemented by various  database vendors.
+	we can communicate any db without rewriting our application.
+	jdbc is an database independent API.
+	
+	jdbc driver are developed in java.
+	by using jdbc api we can perform basic crud operation like create(insert),Retrive(select)
+	update(update),delete(delete) and complex operations.
+	
+jdbc API:
+	provides several classes and interfaces
+	developer can use these classes and interface to communicate with datbase
+
+		JDBC Conection STEP
+
+	1)load the driver
+	2)establish connection with database
+	3)construct sql statement/query
+	4)create object of statement interface
+	5)execute sql statement/query
+	6) closing the connection
+
+
+
+What are the JDBC API components
+	The java.sql package contains interfaces and classes which can be used for db communication.
+	Interfaces:                           
+			DiverManager:
+				it is a class which is present java.sql package
+				it responsible to manage all database Driver.

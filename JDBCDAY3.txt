@@ -1,0 +1,61 @@
+what is CallableStatement(I):
+		CallableStatement is a child interface of prepareStatement(I) 
+		which present java.sql.package
+		it is used to call store procedure then go for CallableStatement.
+What is Stored Procedure in Mysql
+  	stored procedure is a collection of pre-compiled SQL statements that are stored in database.
+	store procedure can contain busniess logic
+	store procedure are creted to perform one or more dml operation on database 
+	it create once, store and call for several times whenever it is required
+	store procedure are executed on db server.
+	 
+	Store procedure can accept parameters and you can set variables 
+	there are three types of parameter 
+	1)IN     parameter  :it is default mode .(to provide input value) 
+	2)OUT    parameter  :it return output values
+	3)INOUT  parameter  :it is combination of IN and INOUT parameters.
+	purpose:
+		Reusability.
+	advantages:
+		It is faster.	
+		It is pre-compiled.	
+		It reduces network traffic.	
+		It is reusable.
+		 
+
+
+
+how to create Store procedure 
+		
+	syntax:
+			
+		create procedure procedurename(IN,OUT,INOUT paramter)
+		 begin
+			sql statements
+		end;		
+
+
+
+how to call store procedure from java app
+			
+		{call procedurename()};
+		call : it is keyword in jdbc
+
+********************what is difference between statement vs preparestatement vs CallableStatement*************
+
+
+Statement                          preparedStatement                    CallableStatement
+*********************************************************************************************************
+it is used to execute         it is used to create parametrized       it is used to execute stored procedure 
+static sql query				query
+***********************************************************************************************************
+no need to pass the parameter   you need to pass the parameter     you can pass 3 types of paramters
+to sql query at runtime          to sql uery at runtime
+*******************************************************************************************************
+it is used when a particular   it used when a particular sql       it is used for stored procedure 
+sql query execute only once   query execute mutiple times
+******************************************************************************************************
+it performance is low because  it performance is better than      it performance is better than
+query will compile every time  statement because it will pre     statement and prepared statement
+                                compiled
+******************************************************************************************************
